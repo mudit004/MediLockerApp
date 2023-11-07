@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moralis Auth Django Profile Page Demo</title>
+    <title>THis is profile</title>
 </head>
 <body>
     <div>
@@ -12,12 +12,12 @@
     {% if user.is_authenticated %}
         <h1>Eth address: {{ user.username }}</h1>
         <h3>Session auth info</h3>
-        <table width="200px" border="0px" padding="5px">
+        <table width="200px" padding="5px">
         {% for key,value in request.session.auth_info.items %}
             <tr><td>{{key}}</td><td><pre>{{ value }}</pre></td></tr>
         {% endfor %}
         </table>
-        <table width="200px" border="0px" padding="0px">
+        <table width="200px" padding="0px">
         <h3>Verified user info</h3>
         {% for key,value in request.session.verified_data.items %}
             <tr><td>{{key}}</td><td>{{ value }}</td></tr>

@@ -20,7 +20,7 @@ def moralis_auth(request):
     return render(request, 'login.html', {})
 
 def my_profile(request):
-    return render(request, 'profile.html', {})
+    return render(request, '../templates/base.html', {})
 
 def request_message(request):
     data = json.loads(request.body)
