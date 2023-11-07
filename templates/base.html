@@ -32,33 +32,55 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <style></style>
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse" role="navigation" id="navbar">
-      <div class="container">
-        <a class="navbar-brand mynav" href="{% url 'account:home' %}"
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary navbar-inverse"
+      role="navigation"
+      id="navbar"
+    >
+      <div class="container" style="width: 1300px">
+        <a
+          class="navbar-brand"
+          href="{% url 'account:home' %}"
+          style="font-size: 20px"
           >Hospital Management</a
         >
 
-        <ul class="nav navbar-nav navbar-right mynav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
           {% if user.is_authenticated %} {% if user.is_doctor %}
           <!-- doctor's dashboard -->
           <li>
-            <a href="{% url 'account:home' %}" class="btn btn-simple">Home</a>
+            <a
+              href="{% url 'account:home' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="{% url 'account:about-us' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:about-us' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >About Us</a
             >
           </li>
           <li>
-            <a href="{% url 'account:contact' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:contact' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Contact</a
             >
           </li>
           <li>
-            <a href="{% url 'user_profile:profile' %}" class="btn btn-simple"
+            <a
+              href="{% url 'user_profile:profile' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Profile</a
             >
           </li>
@@ -66,6 +88,7 @@
             <a
               href="{% url 'appointment:doctor-appointments' %}"
               class="btn btn-simple"
+              style="font-size: larger"
               >Appointments</a
             >
           </li>
@@ -73,27 +96,39 @@
             <a
               href="{% url 'appointment:doc-prescriptions' %}"
               class="btn btn-simple"
+              style="font-size: larger"
               >Prescriptions</a
             >
           </li>
           <li>
             <a href="{% url 'account:logout' %}" class="btn btn-simple"
-              ><button class="btn btn-warning">Log Out</button></a
+              ><button class="btn btn-light">Log Out</button></a
             >
           </li>
 
           {% endif %} {% if user.is_patient %}
           <!-- patient's dashboard -->
           <li>
-            <a href="{% url 'account:home' %}" class="btn btn-simple">Home</a>
+            <a
+              href="{% url 'account:home' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="{% url 'account:about-us' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:about-us' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
               >About Us</a
             >
           </li>
           <li>
-            <a href="{% url 'account:contact' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:contact' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
               >Contact</a
             >
           </li>
@@ -101,6 +136,7 @@
             <a
               href="{% url 'appointment:patient-appointments' %}"
               class="btn btn-simple"
+              style="font-size: medium"
               >Your Appointment's</a
             >
           </li>
@@ -108,67 +144,102 @@
             <a
               href="{% url 'appointment:pat_payments' %}"
               class="btn btn-simple"
+              style="font-size: medium"
               >Invoices and Payments</a
             >
           </li>
           <li>
-            <a href="{% url 'user_profile:profile' %}" class="btn btn-simple"
+            <a
+              href="{% url 'user_profile:profile' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
               >Profile</a
             >
           </li>
           <li>
-            <a href="{% url 'appointment:med-history' %}" class="btn btn-simple"
+            <a
+              href="{% url 'appointment:med-history' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
               >Medical History</a
             >
           </li>
           <li>
-            <a href="{% url 'account:logout' %}" class="btn btn-simple"
-              ><button class="btn btn-warning">Log Out</button></a
+            <a
+              href="{% url 'web3_auth:moralis_auth' %}"
+              class="btn btn-simple"
+              style="font-size: medium"
+              ><button class="btn btn-warning">Connect</button></a
             >
           </li>
           <li>
-            <a href="{% url 'web3_auth:moralis_auth' %}" class="btn btn-simple"
-              >Connect</a
+            <a href="{% url 'account:logout' %}" class="btn btn-simple"
+              ><button class="btn btn-light">Log Out</button></a
             >
           </li>
 
           {% endif %} {% if user.is_receptionist %}
           <!-- receptionist's dashboard -->
           <li>
-            <a href="{% url 'account:home' %}" class="btn btn-simple">Home</a>
+            <a
+              href="{% url 'account:home' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="{% url 'account:about-us' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:about-us' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >About Us</a
             >
           </li>
           <li>
-            <a href="{% url 'account:contact' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:contact' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Contact</a
             >
           </li>
           <li>
-            <a href="{% url 'appointment:r_dashboard' %}" class="btn btn-simple"
+            <a
+              href="{% url 'appointment:r_dashboard' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Dashboard</a
             >
           </li>
           <li>
             <a href="{% url 'account:logout' %}" class="btn btn-simple"
-              ><button class="btn btn-warning">Log Out</button></a
+              ><button class="btn btn-light">Log Out</button></a
             >
           </li>
           {% endif %} {% if user.is_HR %}
           <!-- HR's dashboard -->
           <li>
-            <a href="{% url 'account:home' %}" class="btn btn-simple">Home</a>
+            <a
+              href="{% url 'account:home' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="{% url 'account:about-us' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:about-us' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >About Us</a
             >
           </li>
           <li>
-            <a href="{% url 'account:contact' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:contact' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Contact</a
             >
           </li>
@@ -176,6 +247,7 @@
             <a
               href="{% url 'appointment:hr_dashboard' %}"
               class="btn btn-simple"
+              style="font-size: larger"
               >Dashboard</a
             >
           </li>
@@ -183,30 +255,45 @@
             <a
               href="{% url 'appointment:hr_accounting' %}"
               class="btn btn-simple"
+              style="font-size: larger"
               >Accounting</a
             >
           </li>
           <li>
             <a href="{% url 'account:logout' %}" class="btn btn-simple"
-              ><button class="btn btn-warning">Log Out</button></a
+              ><button class="btn btn-light">Log Out</button></a
             >
           </li>
           {% endif %} {% else %}
           <li>
-            <a href="{% url 'account:home' %}" class="btn btn-simple">Home</a>
+            <a
+              href="{% url 'account:home' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="{% url 'account:about-us' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:about-us' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >About Us</a
             >
           </li>
           <li>
-            <a href="{% url 'account:contact' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:contact' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Contact</a
             >
           </li>
           <li>
-            <a href="{% url 'account:signup' %}" class="btn btn-simple"
+            <a
+              href="{% url 'account:signup' %}"
+              class="btn btn-simple"
+              style="font-size: larger"
               >Register</a
             >
           </li>
@@ -222,5 +309,15 @@
     <div class="container mycontent">{% block content %} {% endblock %}</div>
 
     <canvas id="canvas"></canvas>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

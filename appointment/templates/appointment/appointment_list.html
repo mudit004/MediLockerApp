@@ -19,7 +19,12 @@
                 <td>{{ obj.date }}</td>
                 <td>{{ obj.time }}</td>
                 <td>{{ obj.doctor }}</td>
-                <td>{{ obj.status }}</td>
+                <td>
+                    <select name="status">
+                        <option value="pending" {% if obj.status == "Pending" %} selected {% endif %}>Pending</option>
+                        <option value="completed" {% if obj.status == "Completed" %} selected {% endif %}>Completed</option>
+                    </select>
+            </td>
             </tr>
             {% endfor %}
         </table>

@@ -1,1 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: white;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: orange;
+  color: white;
+  padding: 15px 30px; /* Adjust padding for size */
+  border: 2px solid #ffa500; /* Orange border color */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Adjust font size for text */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
+/* Hover effect */
+.button:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Orange shadow on hover */
+}

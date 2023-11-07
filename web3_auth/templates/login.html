@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metamask connect</title>
+    <link rel="stylesheet" href="../../static/css/style.css" />
   </head>
   <body>
     <div>
-      <h1>Welcome Moralis Web3 User, {{ user.username }} !</h1>
+      <object data="../../static/images/metamask-seeklogo.com.svg"></object>
+    </div>
+    <div class="container">
+      <h1>Welcome {{ user.username }} !</h1>
+      <h1>Click below to connect your Metamask Wallet</h1>
       <br />
-      <button class="buttons" id="auth-metamask" onclick="redirect()">
+      <button class="button" id="auth-metamask" onclick="redirect()">
         Connect to Metamask
       </button>
     </div>

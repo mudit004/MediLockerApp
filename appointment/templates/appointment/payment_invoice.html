@@ -10,6 +10,7 @@
           <th>Paid</th>
           <th>Date</th>
           <th>Outstanding</th>
+          <th>Pay using Wallet</th>
         </thead>
         {% for obj in payment_me %}
         <tr>
@@ -17,10 +18,28 @@
           <td>{{ obj.paid }}</td>
           <td>{{ obj.date }}</td>
           <td>{{ obj.outstanding }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" onclick="showAlert()">
+              Pay Now
+            </button>
+          </td>
         </tr>
         {% endfor %}
       </table>
     </div>
   </div>
 </div>
+
+<script>
+  function showAlert() {
+    setTimeout(function () {
+      alert("Payment Completed");
+    }, 1000);
+    var url = "http://localhost:8000/";
+    setTimeout(function () {
+      window.location = url;
+    }, 1500);
+  }
+</script>
+
 {% endblock %}
